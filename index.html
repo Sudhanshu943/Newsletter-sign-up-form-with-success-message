@@ -20,7 +20,7 @@
     <main class="container">
       <!-- Sign-up form start -->
 
-      <div class="submit-container">
+      <div id="submit-container" class="submit-container">
         <div class="box">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -29,8 +29,14 @@
             <li>Measuring to ensure updates are a success</li>
             <li>And much more!</li>
           </ul>
-          <span class="email"> Email address </span>
-
+          <div class="email-error">
+            <label for="email" class="email-label">Email address</label>
+            <span
+              id="error-message"
+              style="color: red; font-size: small; display: none"
+              >Valid email required</span
+            >
+          </div>
           <input
             type="email"
             placeholder="email@company.com"
@@ -43,34 +49,43 @@
         <img
           src="assets/images/illustration-sign-up-desktop.svg"
           alt="illustration-sign-up-desktop"
+          class="img-desktop"
+        />
+        <img
+          src="assets/images/illustration-sign-up-mobile.svg"
+          alt="illustration-sign-up-mobile"
+          class="img-mobile"
         />
       </div>
 
       <!-- Sign-up form end -->
 
       <!-- Success message start -->
-      <div class="success-comtainer">
+      <div
+        id="success-container"
+        class="success-container"
+        style="display: none"
+      >
         <img src="assets/images/icon-success.svg" alt="icon-success" />
         <h1>Thanks for subscribing!</h1>
         <p>
           A confirmation email has been sent to
-          <span class="user-email">
-            <a href="mailto:user-email">ash@loremcompany.com</a>
-          </span>
-          . Please open it and click the button inside to confirm your
+          <span id="display-email" class="display-email">
+            <a href="mailto:user-email">ash@loremcompany.com</a> </span
+          >Please open it and click the button inside to confirm your
           subscription.
         </p>
-        <button class="dismiss-btn">Dismiss message</button>
+        <button id="dismiss-btn" class="dismiss-btn">Dismiss message</button>
       </div>
 
       <!-- Success message end -->
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Sudhanshu Thapa</a>.
+      </footer>
     </main>
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Sudhanshu Thapa</a>.
-    </footer>
     <script src="index.js"></script>
   </body>
 </html>
